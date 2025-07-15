@@ -1,8 +1,11 @@
+/* Global styles for the entire portfolio website */
 body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Light Mode Styles */
+/* --- Light Mode Styles --- */
+
+/* Navigation links used in header/footer */
 .nav-link {
     position: relative;
     color: #475569; /* slate-600 */
@@ -30,11 +33,12 @@ body {
     width: 100%;
 }
 
+/* Home page profile image */
 .profile-image-wrapper {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #6366f1, #a855f7); /* indigo-500 to purple-500 */
+    background: linear-gradient(135deg, #6366f1, #a855f7);
     padding: 8px;
     box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.4);
 }
@@ -47,6 +51,7 @@ body {
     border: 4px solid #f8fafc; /* slate-50 */
 }
 
+/* Home page project cards */
 .project-card {
     background-color: #ffffff;
     border-radius: 1rem;
@@ -60,6 +65,7 @@ body {
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+/* Technology tags on project cards */
 .tech-tag {
     display: inline-block;
     background-color: #eef2ff; /* indigo-50 */
@@ -70,6 +76,7 @@ body {
     border-radius: 9999px;
 }
 
+/* Social media icons in footer/contact */
 .social-link {
     color: #475569; /* slate-600 */
     font-size: 1.5rem;
@@ -82,7 +89,8 @@ body {
 }
 
 
-/* Dark Mode Styles */
+/* --- Dark Mode Styles --- */
+
 .dark .nav-link {
     color: #94a3b8; /* slate-400 */
 }

@@ -3,27 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    const navLinks = document.querySelectorAll('#mobile-menu .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
+
+        const mobileNavLinks = document.querySelectorAll('#mobile-menu .nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
 
     // --- Dark Mode Toggle ---
     const themeToggleBtns = [
         document.getElementById('theme-toggle'),
         document.getElementById('mobile-theme-toggle')
-    ];
+    ].filter(Boolean); // Filter out nulls if an element doesn't exist on a page
     
     const sunIcons = document.querySelectorAll('.fa-sun');
     const moonIcons = document.querySelectorAll('.fa-moon');
 
-    // Function to apply the theme
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
@@ -36,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Check for saved theme in localStorage or system preference
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme('light');
     }
 
-    // Event listener for the toggle buttons
     themeToggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const isDark = document.documentElement.classList.contains('dark');
@@ -57,4 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme(newTheme);
         });
     });
+
+    // --- Active Nav Link Highlighting on Scroll ---
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header .nav-link');
+    
+    if (sections.length > 0 && navLinks.length > 0) {
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 70) { // 70px is approx header height
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                // Check if the link's href contains the current section's ID
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    }
 });
