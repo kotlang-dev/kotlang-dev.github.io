@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Arif - Android Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-800 dark:text-white">Mohammad Arif</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fas fa-moon text-xl"></i>
+                    <i class="fas fa-sun text-xl hidden"></i>
+                </button>
+            </div>
+            <div class="flex md:hidden items-center gap-4">
+                 <button id="mobile-theme-toggle" class="text-slate-600 dark:text-slate-400">
+                    <i class="fas fa-moon text-xl"></i>
+                    <i class="fas fa-sun text-xl hidden"></i>
+                </button>
+                <button id="mobile-menu-button" class="text-slate-800 dark:text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 nav-link">Home</a>
+            <a href="#projects" class="block py-2 nav-link">Projects</a>
+            <a href="#contact" class="block py-2 nav-link">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <!-- Hero/Home Section -->
+        <section id="home" class="py-20 md:py-32">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold">Android Developer & Content Creator</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mt-2 mb-6">Mohammad Arif</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto md:mx-0">
+                        I'm an Android developer with two years of experience, specializing in building modern, user-centric applications. I also run a YouTube channel where I share tutorials to help other developers grow their skills.
+                    </p>
+                    <a href="#contact" class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="profile-image-wrapper">
+                        <img src="assets/images/profile-photo.jpg" alt="Mohammad Arif" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My Projects</h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Here are some of the projects I'm proud of.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: QuizTime -->
+                <div class="project-card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">QuizTime App</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">A full-stack, interactive quiz application for Android, built entirely with Kotlin.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Jetpack Compose</span>
+                            <span class="tech-tag">Ktor</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <a href="https://kotlang-dev.github.io/QuizTime-Showcase/" target="_blank" class="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">
+                            View Showcase <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 2: Placeholder -->
+                <div class="project-card">
+                     <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Next Great App</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Description of another amazing project you've worked on goes here.</p>
+                         <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Technology</span>
+                            <span class="tech-tag">Framework</span>
+                        </div>
+                        <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">
+                            Coming Soon <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- Project Card 3: Placeholder -->
+                <div class="project-card">
+                     <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Portfolio Project 3</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">This space is ready for your next portfolio piece. Keep building!</p>
+                         <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Future</span>
+                            <span class="tech-tag">Awesome</span>
+                        </div>
+                        <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">
+                            Coming Soon <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Let's Connect</h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">I'm currently open to new opportunities and freelance projects. Feel free to reach out!</p>
+                <a href="mailto:ursmohammadarif@gmail.com" class="text-xl md:text-2xl font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
+                    ursmohammadarif@gmail.com
+                </a>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-700">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500 dark:text-slate-400">
+            <p>&copy; 2024 Mohammad Arif. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>
