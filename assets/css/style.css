@@ -14,7 +14,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #4f46e5; /* indigo-600 */
+    color: #059669; /* emerald-600 */
 }
 
 .nav-link::after {
@@ -25,7 +25,7 @@ body {
     bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4f46e5;
+    background-color: #059669; /* emerald-600 */
     transition: width 0.3s;
 }
 
@@ -33,36 +33,9 @@ body {
     width: 100%;
 }
 
-/* Home page profile image */
-.profile-image-wrapper {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #6366f1, #a855f7);
-    padding: 8px;
-    box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.4);
-}
-
-.profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #f8fafc; /* slate-50 */
-}
-
-/* Home page project cards */
-.project-card {
-    background-color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-    border: 1px solid #e2e8f0; /* slate-200 */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+.signature-font {
+    font-family: "Meddon", cursive;
+    font-weight: 700;
 }
 
 /* Technology tags on project cards */
@@ -77,15 +50,154 @@ body {
 }
 
 /* Social media icons in footer/contact */
-.social-link {
-    color: #475569; /* slate-600 */
-    font-size: 1.5rem;
-    transition: color 0.3s, transform 0.3s;
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;  /* 44px */
+    height: 2.75rem; /* 44px */
+    border-radius: 50%;
+    font-size: 1.25rem; /* 20px */
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.social-link:hover {
-    color: #4f46e5; /* indigo-600 */
-    transform: scale(1.2);
+.social-icon:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Colors */
+.bg-youtube    { background-color: #FF0000; }
+.bg-github     { background-color: #181717; }
+.bg-linkedin   { background-color: #0A66C2; }
+.bg-instagram  { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+/* --- New Header Action Buttons --- */
+.header-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border: 1px solid #cbd5e1; /* border-slate-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-button:hover {
+    background-color: #f1f5f9; /* hover:bg-slate-100 */
+    border-color: #94a3b8; /* hover:border-slate-400 */
+}
+
+/* Primary action button with green theme */
+.header-button-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background-color: #10b981; /* emerald-500 */
+    color: white;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.header-button-primary:hover {
+    background-color: #059669; /* hover:bg-emerald-600 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* --- Dark Mode Styles for Header Buttons --- */
+.dark .header-button {
+    border-color: #475569; /* dark:border-slate-600 */
+    color: #cbd5e1; /* dark:text-slate-300 */
+}
+
+.dark .header-button:hover {
+    background-color: #1e293b; /* dark:hover:bg-slate-800 */
+    border-color: #64748b; /* dark:hover:border-slate-500 */
+}
+
+.dark .header-button-primary {
+    background-color: #34d399; /* dark:bg-emerald-400 */
+    color: #0f172a; /* dark:text-slate-900 */
+    box-shadow: 0 4px 10px rgba(52, 211, 153, 0.2);
+}
+
+.dark .header-button-primary:hover {
+    background-color: #6ee7b7; /* dark:hover:bg-emerald-300 */
+    box-shadow: 0 6px 15px rgba(52, 211, 153, 0.3);
+}
+
+.profile-image-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #334155; /* slate-700 */
+    border-radius: 0.75rem; /* rounded-xl */
+    top: 1rem; /* top-4 */
+    left: 1rem; /* left-4 */
+}
+
+/* --- Premium Button and Card Styles --- */
+.premium-button {
+    background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
+    box-shadow: 0 4px 15px 0 rgba(16, 185, 129, 0.4);
+    outline: oldlace;
+    transition: all 0.3s ease;
+}
+
+.premium-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px 0 rgba(16, 185, 129, 0.5);
+}
+
+.hero-showcase-box {
+    /* Rounded corners */
+    border-radius: 1.5rem; /* rounded-3xl */
+
+    /* A subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* The Gradient: A dark teal to a darker green/black */
+    background: linear-gradient(145deg, rgba(13, 148, 136, 0.4), rgba(8, 70, 64, 0.6));
+    
+    /* The "Frosted Glass" effect */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    /* A soft inner shadow to give depth */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.premium-project-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a); /* slate-800 to slate-900 */
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #334155; /* slate-700 */
+}
+
+.premium-project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.premium-project-card h3 {
+    color: white;
+}
+.premium-project-card p {
+    color: #94a3b8; /* slate-400 */
+}
+.premium-project-card .tech-tag {
+    background-color: #334155; /* slate-700 */
+    color: #cbd5e1; /* slate-300 */
+}
+.premium-project-card .font-semibold {
+    color: #34d399; /* emerald-400 */
 }
 
 
@@ -96,29 +208,15 @@ body {
 }
 
 .dark .nav-link:hover {
-    color: #818cf8; /* indigo-400 */
+    color: #34d399; /* emerald-400 */
 }
 
 .dark .nav-link::after {
-    background-color: #818cf8; /* indigo-400 */
+    background-color: #34d399; /* emerald-400 */
 }
 
-.dark .profile-image {
-    border-color: #0f172a; /* slate-900 */
-}
-
-.dark .project-card {
+.dark .profile-image-background {
     background-color: #1e293b; /* slate-800 */
-    border-color: #334155; /* slate-700 */
-}
-
-.dark .project-card:hover {
-     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
-}
-
-.dark .tech-tag {
-    background-color: #3730a3; /* indigo-800 */
-    color: #c7d2fe; /* indigo-200 */
 }
 
 .dark .social-link {
@@ -126,5 +224,51 @@ body {
 }
 
 .dark .social-link:hover {
-    color: #818cf8; /* indigo-400 */
+    color: #34d399; /* emerald-400 */
+}
+
+
+/* --- New Scroll-to-Top Button --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 1.5rem; /* 24px */
+    right: 1.5rem; /* 24px */
+    width: 3.5rem; /* 56px */
+    height: 3.5rem; /* 56px */
+    border-radius: 50%;
+    background-color: #059669; /* emerald-600 */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem; /* 20px */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+/* Style for when the button is visible */
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background-color: #047857; /* emerald-700 */
+}
+
+/* --- Dark Mode Styles for the button --- */
+.dark .scroll-to-top {
+    background-color: #34d399; /* emerald-400 */
+    color: #0f172a; /* slate-900 */
+}
+
+.dark .scroll-to-top:hover {
+    background-color: #6ee7b7; /* emerald-300 */
 }

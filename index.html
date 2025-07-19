@@ -10,47 +10,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
+        tailwind.config = { darkMode: 'class' }
     </script>
 </head>
 
-<body class="bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300">
+<body class="bg-slate-50 text-slate-700 dark:bg-black dark:text-slate-300">
 
     <!-- Header -->
     <header id="header"
-        class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700">
+        class="bg-white/80 dark:bg-black/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-slate-800 dark:text-white">Mohammad Arif</a>
+            <a href="#" class="nav-link flex items-center">
+                <span class="text-slate-500 dark:text-slate-400">&lt;</span>
+                <span class="signature-font text-slate-800 dark:text-white mx-1">Mohammad Arif</span>
+                <span class="text-slate-500 dark:text-slate-400">/&gt;</span>
+            </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <button id="theme-toggle"
-                    class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400">
-                    <i class="fas fa-moon text-xl"></i>
-                    <i class="fas fa-sun text-xl hidden"></i>
+                    class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400">
+                    <i class="fas fa-moon text-xl"></i><i class="fas fa-sun text-xl hidden"></i>
                 </button>
             </div>
             <div class="flex md:hidden items-center gap-4">
-                <button id="mobile-theme-toggle" class="text-slate-600 dark:text-slate-400">
-                    <i class="fas fa-moon text-xl"></i>
-                    <i class="fas fa-sun text-xl hidden"></i>
-                </button>
-                <button id="mobile-menu-button" class="text-slate-800 dark:text-white">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+                <button id="mobile-theme-toggle" class="text-slate-600 dark:text-slate-400"><i
+                        class="fas fa-moon text-xl"></i><i class="fas fa-sun text-xl hidden"></i></button>
+                <button id="mobile-menu-button" class="text-slate-800 dark:text-white"><i
+                        class="fas fa-bars text-xl"></i></button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 nav-link">Home</a>
-            <a href="#projects" class="block py-2 nav-link">Projects</a>
-            <a href="#contact" class="block py-2 nav-link">Contact</a>
-        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4"><a href="#home" class="block py-2 nav-link">Home</a><a
+                href="#projects" class="block py-2 nav-link">Projects</a><a href="#contact"
+                class="block py-2 nav-link">Contact</a></div>
     </header>
 
     <main class="container mx-auto px-6">
@@ -59,23 +56,22 @@
         <section id="home" class="py-20 md:py-32">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-center md:text-left">
-                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold">Android Developer & Content
+                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Android Developer & Content
                         Creator</span>
                     <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mt-2 mb-6">Mohammad
                         Arif</h1>
-                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto md:mx-0">
-                        I'm an Android developer with two years of experience, specializing in building modern,
-                        user-centric applications. I also run a YouTube channel where I share tutorials to help other
-                        developers grow their skills.
-                    </p>
-                    <a href="#contact"
-                        class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105">
-                        Get In Touch
-                    </a>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto md:mx-0">I'm an Android
+                        developer with two years of experience, specializing in building modern, user-centric
+                        applications. I also run a YouTube channel where I share tutorials to help other developers grow
+                        their skills.</p>
+                    <a href="#contact" class="premium-button inline-block text-white font-bold py-3 px-8 rounded-lg">Get
+                        In Touch</a>
                 </div>
-                <div class="relative flex justify-center">
-                    <div class="profile-image-wrapper">
-                        <img src="assets/images/profile-photo.jpg" alt="Mohammad Arif" class="profile-image">
+                <div class="flex justify-center">
+                    <div class="relative w-[240px] h-[280px] md:w-[280px] md:h-[320px]">
+                        <div class="profile-image-background"></div>
+                        <img src="assets/images/profile-photo.jpg" alt="Mohammad Arif"
+                            class="absolute w-full h-full object-cover rounded-xl shadow-lg">
                     </div>
                 </div>
             </div>
@@ -89,60 +85,61 @@
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="projects/quiztime.html" class="block">
-                    <div class="project-card h-full">
-                        <div class="p-6 flex flex-col h-full">
-                            <!-- This div grows to push the link to the bottom -->
-                            <div class="flex-grow">
-                                <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">QuizTime App</h3>
-                                <p class="text-slate-600 dark:text-slate-400 mb-4">A full-stack, interactive quiz
-                                    application for Android, built entirely with Kotlin.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">Kotlin</span>
-                                    <span class="tech-tag">Jetpack Compose</span>
-                                    <span class="tech-tag">Ktor</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                </div>
-                            </div>
-                            <!-- The link is now just styled text, as the whole card is the link -->
-                            <p class="font-semibold text-indigo-600 dark:text-indigo-400 mt-4">
-                                View Showcase <i class="fas fa-arrow-right ml-1"></i>
-                            </p>
+                <a href="projects/quiztime.html" class="block premium-project-card">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold mb-2">QuizTime App</h3>
+                            <p class="mb-4">A full-stack, interactive quiz application for Android, built entirely with
+                                Kotlin.</p>
+                            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Kotlin</span><span
+                                    class="tech-tag">Jetpack Compose</span><span class="tech-tag">Ktor</span><span
+                                    class="tech-tag">MongoDB</span></div>
                         </div>
+                        <p class="font-semibold mt-4">View Showcase <i class="fas fa-arrow-right ml-1"></i></p>
                     </div>
                 </a>
-                <!-- Project Card 2: Placeholder -->
-                <div class="project-card">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Next Great App</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Description of another amazing project you've
-                            worked on goes here.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Technology</span>
-                            <span class="tech-tag">Framework</span>
+                <a href="projects/age-calculator.html" class="block premium-project-card">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Age Calculator App</h3>
+                            <p class="mb-4">A modern, offline-first Android app to track the age of important life
+                                events.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">Jetpack Compose</span>
+                                <span class="tech-tag">Room DB</span>
+                                <span class="tech-tag">Koin</span>
+                                <span class="tech-tag">Clean Architecture</span>
+                            </div>
                         </div>
-                        <a href="#"
-                            class="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">
-                            Coming Soon <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        <p class="font-semibold mt-4">
+                            View Showcase <i class="fas fa-arrow-right ml-1"></i>
+                        </p>
                     </div>
-                </div>
-                <!-- Project Card 3: Placeholder -->
-                <div class="project-card">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Portfolio Project 3</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">This space is ready for your next portfolio
-                            piece. Keep building!</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Future</span>
-                            <span class="tech-tag">Awesome</span>
+                </a>
+                <a href="projects/measure-mate.html" class="block premium-project-card">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold mb-2">MeasureMate App</h3>
+                            <p class="mb-4">A comprehensive fitness tracking app built with Jetpack Compose and
+                                Firebase.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">Jetpack Compose</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Dagger Hilt</span>
+                                <span class="tech-tag">Material 3</span>
+                            </div>
                         </div>
-                        <a href="#"
-                            class="font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300">
-                            Coming Soon <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        <p class="font-semibold mt-4">
+                            View Showcase <i class="fas fa-arrow-right ml-1"></i>
+                        </p>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="text-center mt-16">
+                <a href="https://github.com/kotlang-dev?tab=repositories" target="_blank" rel="noopener noreferrer"
+                    class="inline-block text-emerald-600 dark:text-emerald-400 font-semibold border-2 border-emerald-600 dark:border-emerald-400 rounded-lg py-3 px-8 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-400 dark:hover:text-slate-900 transition-colors duration-300">
+                    More Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </section>
 
@@ -153,25 +150,33 @@
                 <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">I'm currently open to
                     new opportunities and freelance projects. Feel free to reach out!</p>
                 <a href="mailto:ursmohammadarif@gmail.com"
-                    class="text-xl md:text-2xl font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
-                    ursmohammadarif@gmail.com
-                </a>
-                <div class="flex justify-center space-x-6 mt-8">
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    class="text-xl md:text-2xl font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">ursmohammadarif@gmail.com</a>
+                <div class="flex justify-center space-x-4 md:space-x-6 mt-8">
+                    <a href="https://www.youtube.com/@kotlang" target="_blank" rel="noopener noreferrer"
+                        class="social-icon bg-youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://github.com/kotlang-dev" target="_blank" rel="noopener noreferrer"
+                        class="social-icon bg-github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kotlang" target="_blank" rel="noopener noreferrer"
+                        class="social-icon bg-linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kotlang_" target="_blank" rel="noopener noreferrer"
+                        class="social-icon bg-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="border-t border-slate-200 dark:border-slate-700">
-        <div class="container mx-auto px-6 py-6 text-center text-slate-500 dark:text-slate-400">
-            <p>&copy; 2024 Mohammad Arif. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <footer id="footer-placeholder"></footer>
+
+    <a href="#" id="to-top-button" class="scroll-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="assets/js/script.js" defer></script>
 </body>

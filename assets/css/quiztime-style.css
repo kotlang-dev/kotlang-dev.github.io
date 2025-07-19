@@ -15,7 +15,7 @@
 .architecture-box:hover {
     transform: translateY(-5px) scale(1.03);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border-color: #4f46e5; /* indigo-600 */
+    border-color: #059669; /* emerald-600 */
 }
 
 /* Lines connecting the architecture diagram */
@@ -27,7 +27,7 @@
 
 /* Active state for tabs in the tech stack section */
 .tab.active {
-    background-color: #4f46e5;
+    background-color: #059669; /* emerald-600 */
     color: white;
 }
 
@@ -39,5 +39,14 @@
 }
 
 .dark .architecture-box:hover {
-    border-color: #818cf8; /* indigo-400 */
+    border-color: #34d399; /* emerald-400 */
+}
+
+.dark .tab.active {
+    background-color: #34d399; /* emerald-400 */
+    color: #1e293b; /* slate-800 */
+}
+
+.dark .info-box-text {
+    color: #6ee7b7; /* emerald-300 */
 }

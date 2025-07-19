@@ -80,4 +80,43 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+    // --- Scroll-to-Top Button Logic ---
+    const toTopButton = document.getElementById('to-top-button');
+
+    if (toTopButton) {
+        window.addEventListener('scroll', () => {
+            // Show button if user has scrolled down 300px
+            if (window.scrollY > 300) {
+                toTopButton.classList.add('show');
+            } else {
+                toTopButton.classList.remove('show');
+            }
+        });
+
+        toTopButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent the default link behavior
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // This creates the smooth scrolling effect
+            });
+        });
+    }
+
+    // --- Reusable Footer Injection ---
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+
+    if (footerPlaceholder) {
+        // The single source of truth for your footer content
+        const footerHTML = `
+            <div class="border-t border-slate-200 dark:border-slate-800">
+                <div class="container mx-auto px-6 py-6 text-center text-slate-500 dark:text-slate-400">
+                    <p>&copy; 2025 Mohammad Arif. All Rights Reserved.</p>
+                </div>
+            </div>
+        `;
+        // Inject the HTML into the placeholder
+        footerPlaceholder.innerHTML = footerHTML;
+    }
 });
