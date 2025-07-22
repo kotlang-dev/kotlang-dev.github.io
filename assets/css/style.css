@@ -142,19 +142,6 @@ body {
     left: 1rem; /* left-4 */
 }
 
-/* --- Premium Button and Card Styles --- */
-.premium-button {
-    background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
-    box-shadow: 0 4px 15px 0 rgba(16, 185, 129, 0.4);
-    outline: oldlace;
-    transition: all 0.3s ease;
-}
-
-.premium-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px 0 rgba(16, 185, 129, 0.5);
-}
-
 .hero-showcase-box {
     /* Rounded corners */
     border-radius: 1.5rem; /* rounded-3xl */
