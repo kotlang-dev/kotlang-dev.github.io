@@ -1,20 +1,69 @@
-/* Global styles for the entire portfolio website */
-body {
-    font-family: 'Inter', sans-serif;
+:root {
+    --primary-color: #059669; /* emerald-600 */
+    --primary-color-hover: #047857; /* emerald-700 */
+    
+    --text-color-normal: #334155; /* slate-700 */
+    --text-color-light: #475569; /* slate-600 */
+    --text-color-headings: #0f172a; /* slate-900 */
+    
+    --background-color: #f8fafc; /* slate-50 */
+    --card-background: #ffffff;
+    --card-border: #e2e8f0; /* slate-200 */
+    
+    --profile-bg-block: #334155; /* slate-700 */
+
+    /* New variables for light mode project cards */
+    --project-card-bg: #ffffff;
+    --project-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --project-card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --project-card-heading: var(--text-color-headings);
+    --project-card-text: var(--text-color-light);
+    --project-card-tag-bg: #dcfce7; /* emerald-100 */
+    --project-card-tag-text: #065f46; /* emerald-800 */
 }
 
-/* --- Light Mode Styles --- */
+.dark {
+    --primary-color: #34d399; /* emerald-400 */
+    --primary-color-hover: #6ee7b7; /* emerald-300 */
 
-/* Navigation links used in header/footer */
+    --text-color-normal: #cbd5e1; /* slate-300 */
+    --text-color-light: #94a3b8; /* slate-400 */
+    --text-color-headings: #ffffff;
+
+    --background-color: #000000; /* black */
+    --card-background: #1e293b; /* slate-800 */
+    --card-border: #334155; /* slate-700 */
+    
+    --profile-bg-block: #1e293b; /* slate-800 */
+
+    /* New variables for dark mode project cards */
+    --project-card-bg: linear-gradient(145deg, #1e293b, #0f172a);
+    --project-card-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+    --project-card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    --project-card-heading: var(--text-color-headings);
+    --project-card-text: var(--text-color-light);
+    --project-card-tag-bg: #334155; /* slate-700 */
+    --project-card-tag-text: #cbd5e1; /* slate-300 */
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color-normal);
+}
+
+/* --- Reusable Component Styles (using variables) --- */
+
 .nav-link {
     position: relative;
-    color: #475569; /* slate-600 */
+    color: var(--text-color-light);
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #059669; /* emerald-600 */
+    color: var(--primary-color);
 }
 
 .nav-link::after {
@@ -25,7 +74,7 @@ body {
     bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #059669; /* emerald-600 */
+    background-color: var(--primary-color);
     transition: width 0.3s;
 }
 
@@ -33,31 +82,24 @@ body {
     width: 100%;
 }
 
-.signature-font {
-    font-family: "Meddon", cursive;
-    font-weight: 700;
+.profile-image-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--profile-bg-block);
+    border-radius: 0.75rem;
+    top: 1rem;
+    left: 1rem;
 }
 
-/* Technology tags on project cards */
-.tech-tag {
-    display: inline-block;
-    background-color: #eef2ff; /* indigo-50 */
-    color: #4338ca; /* indigo-700 */
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-}
-
-/* Social media icons in footer/contact */
 .social-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.75rem;  /* 44px */
-    height: 2.75rem; /* 44px */
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: 50%;
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
     color: white;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -69,177 +111,114 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Brand Colors */
 .bg-youtube    { background-color: #FF0000; }
 .bg-github     { background-color: #181717; }
 .bg-linkedin   { background-color: #0A66C2; }
 .bg-instagram  { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 
-/* --- New Header Action Buttons --- */
+
+/* --- Updated Project Card styles --- */
+.premium-project-card {
+    background: var(--project-card-bg);
+    border-radius: 1rem;
+    box-shadow: var(--project-card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--card-border);
+}
+
+.premium-project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--project-card-shadow-hover);
+}
+
+.premium-project-card h3 {
+    color: var(--project-card-heading);
+}
+.premium-project-card p {
+    color: var(--project-card-text);
+}
+.premium-project-card .tech-tag {
+    display: inline-block;
+    background-color: var(--project-card-tag-bg);
+    color: var(--project-card-tag-text);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    /* This ensures the tags are fully rounded "pills" */
+    border-radius: 9999px;
+}
+.premium-project-card .font-semibold {
+    color: var(--primary-color);
+}
+
+
+/* --- Other Component Styles --- */
+
 .header-button {
     display: inline-flex;
     align-items: center;
-    padding: 0.5rem 1rem; /* py-2 px-4 */
-    border: 1px solid #cbd5e1; /* border-slate-300 */
-    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 0.5rem;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
 }
 
 .header-button:hover {
-    background-color: #f1f5f9; /* hover:bg-slate-100 */
-    border-color: #94a3b8; /* hover:border-slate-400 */
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
 }
 
-/* Primary action button with green theme */
+.dark .header-button:hover {
+    background-color: var(--card-background);
+    border-color: var(--text-color-light);
+}
+
 .header-button-primary {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-weight: 600;
-    background-color: #10b981; /* emerald-500 */
+    background-color: var(--primary-color);
     color: white;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
-}
-
-.header-button-primary:hover {
-    background-color: #059669; /* hover:bg-emerald-600 */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
-}
-
-/* --- Dark Mode Styles for Header Buttons --- */
-.dark .header-button {
-    border-color: #475569; /* dark:border-slate-600 */
-    color: #cbd5e1; /* dark:text-slate-300 */
-}
-
-.dark .header-button:hover {
-    background-color: #1e293b; /* dark:hover:bg-slate-800 */
-    border-color: #64748b; /* dark:hover:border-slate-500 */
 }
 
 .dark .header-button-primary {
-    background-color: #34d399; /* dark:bg-emerald-400 */
-    color: #0f172a; /* dark:text-slate-900 */
-    box-shadow: 0 4px 10px rgba(52, 211, 153, 0.2);
+    color: #0f172a; /* slate-900 */
 }
 
-.dark .header-button-primary:hover {
-    background-color: #6ee7b7; /* dark:hover:bg-emerald-300 */
-    box-shadow: 0 6px 15px rgba(52, 211, 153, 0.3);
+.header-button-primary:hover {
+    background-color: var(--primary-color-hover);
+    transform: translateY(-2px);
 }
 
-.profile-image-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #334155; /* slate-700 */
-    border-radius: 0.75rem; /* rounded-xl */
-    top: 1rem; /* top-4 */
-    left: 1rem; /* left-4 */
-}
-
-.hero-showcase-box {
-    /* Rounded corners */
-    border-radius: 1.5rem; /* rounded-3xl */
-
-    /* A subtle border */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
-    /* The Gradient: A dark teal to a darker green/black */
-    background: linear-gradient(145deg, rgba(13, 148, 136, 0.4), rgba(8, 70, 64, 0.6));
-    
-    /* The "Frosted Glass" effect */
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-
-    /* A soft inner shadow to give depth */
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-}
-
-.premium-project-card {
-    background: linear-gradient(145deg, #1e293b, #0f172a); /* slate-800 to slate-900 */
-    border-radius: 1rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #334155; /* slate-700 */
-}
-
-.premium-project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.premium-project-card h3 {
-    color: white;
-}
-.premium-project-card p {
-    color: #94a3b8; /* slate-400 */
-}
-.premium-project-card .tech-tag {
-    background-color: #334155; /* slate-700 */
-    color: #cbd5e1; /* slate-300 */
-}
-.premium-project-card .font-semibold {
-    color: #34d399; /* emerald-400 */
-}
-
-
-/* --- Dark Mode Styles --- */
-
-.dark .nav-link {
-    color: #94a3b8; /* slate-400 */
-}
-
-.dark .nav-link:hover {
-    color: #34d399; /* emerald-400 */
-}
-
-.dark .nav-link::after {
-    background-color: #34d399; /* emerald-400 */
-}
-
-.dark .profile-image-background {
-    background-color: #1e293b; /* slate-800 */
-}
-
-.dark .social-link {
-    color: #94a3b8; /* slate-400 */
-}
-
-.dark .social-link:hover {
-    color: #34d399; /* emerald-400 */
-}
-
-
-/* --- New Scroll-to-Top Button --- */
 .scroll-to-top {
     position: fixed;
-    bottom: 1.5rem; /* 24px */
-    right: 1.5rem; /* 24px */
-    width: 3.5rem; /* 56px */
-    height: 3.5rem; /* 56px */
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
-    background-color: #059669; /* emerald-600 */
+    background-color: var(--primary-color);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 100;
-
-    /* Hidden by default */
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
 }
 
-/* Style for when the button is visible */
+.dark .scroll-to-top {
+    color: #0f172a; /* slate-900 */
+}
+
 .scroll-to-top.show {
     opacity: 1;
     visibility: visible;
@@ -247,15 +226,10 @@ body {
 }
 
 .scroll-to-top:hover {
-    background-color: #047857; /* emerald-700 */
+    background-color: var(--primary-color-hover);
 }
 
-/* --- Dark Mode Styles for the button --- */
-.dark .scroll-to-top {
-    background-color: #34d399; /* emerald-400 */
-    color: #0f172a; /* slate-900 */
-}
-
-.dark .scroll-to-top:hover {
-    background-color: #6ee7b7; /* emerald-300 */
+.signature-font {
+    font-family: "Meddon", cursive;
+    font-weight: 700;
 }
