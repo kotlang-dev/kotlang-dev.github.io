@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeasureMate Showcase | Mohammad Arif</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Link to your main stylesheet -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <script>
@@ -20,28 +20,34 @@
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-700 dark:bg-black dark:text-slate-300">
+
+<body class="bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300">
 
     <!-- Consistent Header with Project-Specific Buttons -->
-    <header id="header" class="bg-white/80 dark:bg-black/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
+    <header id="header"
+        class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="../index.html" class="text-lg font-bold text-slate-800 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center">
+            <a href="../index.html"
+                class="text-lg font-bold text-slate-800 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center">
                 <i class="fas fa-arrow-left mr-3"></i>
                 <span class="hidden sm:inline">Back to Portfolio</span>
             </a>
             <div class="flex items-center space-x-2 sm:space-x-4">
                 <!-- GitHub Button -->
-                <a href="https://github.com/kotlang-dev/MeasureMate" target="_blank" rel="noopener noreferrer" class="header-button">
+                <a href="https://github.com/kotlang-dev/MeasureMate" target="_blank" rel="noopener noreferrer"
+                    class="header-button">
                     <i class="fab fa-github mr-2"></i>
                     <span class="hidden sm:inline">View on Github</span>
                 </a>
                 <!-- Udemy Button -->
-                <a href="https://www.udemy.com/course/measuremate/?referralCode=B3DE352F96BC3C3E9E80" target="_blank" rel="noopener noreferrer" class="header-button-primary">
+                <a href="https://www.udemy.com/course/measuremate/?referralCode=B3DE352F96BC3C3E9E80" target="_blank"
+                    rel="noopener noreferrer" class="header-button-primary">
                     <i class="fas fa-graduation-cap mr-2"></i>
                     <span class="hidden sm:inline">Join Course</span>
                 </a>
                 <!-- Theme Toggle -->
-                <button id="theme-toggle" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pl-2">
+                <button id="theme-toggle"
+                    class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pl-2">
                     <i class="fas fa-moon text-xl"></i>
                     <i class="fas fa-sun text-xl hidden"></i>
                 </button>
@@ -49,48 +55,86 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-8 md:py-16">
+    <main class="container mx-auto px-6 py-8 md:py-8">
 
         <!-- Project Intro Section -->
         <section id="home" class="text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">MeasureMate Android App</h1>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-600 dark:text-slate-400 mb-12">
-                A comprehensive fitness tracking app built with Jetpack Compose and Firebase, created as part of a premium Udemy course.
-            </p>
-            <!-- Screenshot placeholder -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-6xl mx-auto">
-                <img src="https://placehold.co/300x600/1e293b/ffffff?text=Sign+In" alt="Sign In/Out GIF" class="rounded-xl shadow-lg w-full">
-                <img src="https://placehold.co/300x600/1e293b/ffffff?text=Add/Update" alt="Add/Update GIF" class="rounded-xl shadow-lg w-full">
-                <img src="https://placehold.co/300x600/1e293b/ffffff?text=Splash" alt="Splash Screen GIF" class="rounded-xl shadow-lg w-full">
-                <img src="https://placehold.co/300x600/1e293b/ffffff?text=Dashboard" alt="Dashboard GIF" class="rounded-xl shadow-lg w-full">
-                <img src="https://placehold.co/300x600/1e293b/ffffff?text=Details" alt="Details Screen GIF" class="rounded-xl shadow-lg w-full">
-                <img src="https://placehold.co/300x600/1e293b/ffffff?text=Input" alt="Input New Value GIF" class="rounded-xl shadow-lg w-full">
+            <div class="max-w-3xl mx-auto mb-6">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/YoutubeThumbnail.png?raw=true"
+                    alt="MeasureMate Banner" class="rounded-xl w-full ring-1 ring-white/120">
             </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">MeasureMate Android App
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-600 dark:text-slate-300 mb-8">
+                A comprehensive fitness tracking app built with Jetpack Compose and Firebase, created as part of a
+                premium Udemy course.
+            </p>
         </section>
 
         <!-- Tech Stack Section -->
         <section id="tech-stack" class="py-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Tech Stack</h2>
-                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Built with the latest tools and best practices in the industry.</p>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Built with the latest tools and best
+                    practices in the industry.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Jetpack Compose</h3><p>For building a modern, declarative User Interface.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Material 3</h3><p>To design a beautiful and consistent UI.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Firebase Auth</h3><p>To securely manage user sign-ins, including Google Sign-In.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Firebase Firestore</h3><p>To store, sync, and query data in real-time.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Dagger Hilt</h3><p>To manage dependency injection for cleaner, modular code.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Compose Navigation</h3><p>To navigate between screens seamlessly.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Splash Screen API</h3><p>To create a captivating and professional splash screen.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Coil</h3><p>To load and display images effortlessly and efficiently.</p></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🎨 Jetpack Compose</h3>
+                    <p>To build the modern, declarative User Interface.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">✨ Material 3</h3>
+                    <p>To design a beautiful and consistent UI following the latest design guidelines.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🗺️ Compose Navigation</h3>
+                    <p>To navigate between screens and manage the app's UI flow seamlessly.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🔒 Firebase Authentication</h3>
+                    <p>To securely manage user sign-ins, including Google Sign-In.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">☁️ Firebase Firestore</h3>
+                    <p>To store, sync, and query data in real-time for a seamless user experience.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">💉 Dagger Hilt</h3>
+                    <p>To manage dependency injection for cleaner, modular, and more testable code.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section id="screenshots" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Screenshots</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-4xl mx-auto mb-16">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/1.gif?raw=true" alt="Add/Update GIF"
+                    class="rounded-xl shadow-lg w-full">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/2.gif?raw=true" alt="Sign In/Out GIF"
+                    class="rounded-xl shadow-lg w-full">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/3.gif?raw=true" alt="Splash Screen GIF"
+                    class="rounded-xl shadow-lg w-full">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-4xl mx-auto">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/4.gif?raw=true" alt="Dashboard GIF"
+                    class="rounded-xl shadow-lg w-full">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/5.gif?raw=true" alt="Details Screen GIF"
+                    class="rounded-xl shadow-lg w-full">
+                <img src="https://github.com/kotlang-dev/MeasureMate/blob/master/readme-assets/6.gif?raw=true" alt="Input New Value GIF"
+                    class="rounded-xl shadow-lg w-full">
             </div>
         </section>
     </main>
-    
+
     <footer id="footer-placeholder"></footer>
 
     <a href="#" id="to-top-button" class="scroll-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../assets/js/script.js" defer></script>
 </body>
+
 </html>

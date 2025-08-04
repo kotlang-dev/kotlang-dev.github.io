@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Link to your main stylesheet -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <script>
@@ -21,28 +20,34 @@
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-700 dark:bg-black dark:text-slate-300">
+
+<body class="bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300">
 
     <!-- Consistent Header -->
-        <header id="header" class="bg-white/80 dark:bg-black/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
+    <header id="header"
+        class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="../index.html" class="text-lg font-bold text-slate-800 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center">
+            <a href="../index.html"
+                class="text-lg font-bold text-slate-800 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center">
                 <i class="fas fa-arrow-left mr-3"></i>
                 <span class="hidden sm:inline">Back to Portfolio</span>
             </a>
             <div class="flex items-center space-x-2 sm:space-x-4">
                 <!-- GitHub Button -->
-                <a href="https://github.com/kotlang-dev/AgeCalculator-TrackDates" target="_blank" rel="noopener noreferrer" class="header-button">
+                <a href="https://github.com/kotlang-dev/AgeCalculator-TrackDates" target="_blank"
+                    rel="noopener noreferrer" class="header-button">
                     <i class="fab fa-github mr-2"></i>
                     <span class="hidden sm:inline">View on Github</span>
                 </a>
                 <!-- Play Store Button -->
-                <a href="https://play.google.com/store/apps/details?id=com.synac.agecalculator" target="_blank" rel="noopener noreferrer" class="header-button-primary">
+                <a href="https://play.google.com/store/apps/details?id=com.synac.agecalculator" target="_blank"
+                    rel="noopener noreferrer" class="header-button-primary">
                     <i class="fab fa-google-play mr-2"></i>
                     <span class="hidden sm:inline">Get on Play Store</span>
                 </a>
                 <!-- Theme Toggle -->
-                <button id="theme-toggle" class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pl-2">
+                <button id="theme-toggle"
+                    class="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pl-2">
                     <i class="fas fa-moon text-xl"></i>
                     <i class="fas fa-sun text-xl hidden"></i>
                 </button>
@@ -50,35 +55,54 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-8 md:py-16">
+    <main class="container mx-auto px-6 py-8 md:py-8">
 
         <!-- Project Intro Section -->
         <section id="home" class="text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">Age Calculator - Track Dates</h1>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-600 dark:text-slate-400 mb-8">
-                A modern, offline-first Android app built with 100% Kotlin and Jetpack Compose, designed to track the age of important life events.
-            </p>
-            <!-- Screenshot placeholder -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
-                <img src="../assets/images/age-calc/age-calc-screenshot1.jpeg" alt="Dashboard Screenshot" class="rounded-xl shadow-lg w-full">
-                <img src="../assets/images/age-calc/age-calc-screenshot2.jpeg" alt="Calculator Screenshot" class="rounded-xl shadow-lg w-full">
-                <img src="../assets/images/age-calc/age-calc-screenshot3.jpeg" alt="Settings Screenshot" class="rounded-xl shadow-lg w-full">
+            <div class="max-w-3xl mx-auto mb-6">
+                <img src="https://github.com/kotlang-dev/AgeCalculator-TrackDates/blob/main/.github/assets/banner.png?raw=true"
+                    alt="Age Calculator Banner" class="rounded-xl shadow-lg w-full">
             </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">Age Calculator - Track
+                Dates</h1>
+            <p class="text-lg md:text-xl max-w-4xl mx-auto text-slate-600 dark:text-slate-300 mb-8">
+                A modern, offline-first app built with Kotlin Multiplatform and Compose Multiplatform to track
+                the age of important life events across Android and Desktop.
+            </p>
         </section>
 
         <!-- Features Section -->
         <section id="features" class="py-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Key Features</h2>
-                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Core functionalities of the Age Calculator app.</p>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">A single codebase for a rich, multi-platform experience.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">💻 Multiplatform Support</h3><p>A single, shared codebase for Android, Windows, macOS, and Linux.</p></div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">📱 Adaptive UI</h3><p>The interface intelligently adapts to different screen sizes for phones, tablets, and desktops.</p></div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">📅 Track Key Life Events</h3><p>Add and manage multiple occasions like birthdays, anniversaries, and milestones.</p></div>
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">⏱️ Detailed Age Breakdown</h3><p>Instantly see the elapsed time in years, months, days, and even down to the second.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🎨 Dynamic Theming</h3><p>Switch between Light, Dark, or System themes for a personalized experience.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🔄 In-App Updates</h3><p>Checks for new versions and allows updating directly from within the app.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🔒 100% Offline & Private</h3><p>All data is stored securely on-device and is never collected or transmitted.</p></div>
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🌐 Integrated WebView</h3><p>View the privacy policy seamlessly within the app, with an adaptive theme.</p></div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🎨 Dynamic Theming</h3><p>Personalize your experience by switching between Light, Dark, or System themes.</p></div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700"><h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">🔒 100% Offline & Private</h3><p>All data is stored securely on your device and is never collected or transmitted.</p></div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section id="screenshots" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Screenshots</h2>
+                <h3 class="mt-8 text-2xl font-semibold text-slate-800 dark:text-slate-200">Android</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <img src="https://github.com/kotlang-dev/AgeCalculator-TrackDates/blob/main/.github/assets/screenshot-android-1.png?raw=true" alt="Android Screenshot 1" class="rounded-xl shadow-lg w-full">
+                <img src="https://github.com/kotlang-dev/AgeCalculator-TrackDates/blob/main/.github/assets/screenshot-android-2.png?raw=true" alt="Android Screenshot 2" class="rounded-xl shadow-lg w-full">
+                <img src="https://github.com/kotlang-dev/AgeCalculator-TrackDates/blob/main/.github/assets/screenshot-android-4.png?raw=true" alt="Android Screenshot 3" class="rounded-xl shadow-lg w-full">
+            </div>
+            <div class="text-center my-16">
+                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200">Desktop</h3>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <img src="https://github.com/kotlang-dev/AgeCalculator-TrackDates/blob/main/.github/assets/screenshot-desktop.png?raw=true" alt="Desktop Screenshot" class="rounded-xl shadow-lg w-full">
             </div>
         </section>
 
@@ -86,31 +110,32 @@
         <section id="tech-stack" class="py-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Architecture & Tech Stack</h2>
-                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Built with Clean Architecture and a modern, robust tech stack.</p>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Built with Clean Architecture and a shared codebase for all platforms.</p>
             </div>
-            <div class="max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-md">
+            <div class="max-w-5xl mx-auto bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-md">
                 <div class="grid grid-cols-1 md:grid-cols-3">
                     <div class="p-6 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">UI</h4>
-                        <ul class="list-disc list-inside space-y-1"><li>Jetpack Compose</li><li>Material 3</li><li>Compose Navigation</li><li>System UI Controller</li></ul>
+                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Core & UI</h4>
+                        <ul class="list-disc list-inside space-y-1"><li>Kotlin Multiplatform</li><li>Compose Multiplatform</li><li>Material 3</li><li>Adaptive Layouts</li></ul>
                     </div>
                     <div class="p-6 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Architecture & Data</h4>
-                        <ul class="list-disc list-inside space-y-1"><li>Clean Architecture</li><li>MVVM / MVI</li><li>Kotlin Coroutines & Flow</li><li>Koin (DI)</li></ul>
+                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Architecture</h4>
+                        <ul class="list-disc list-inside space-y-1"><li>Clean Architecture</li><li>MVVM with UDF</li><li>Coordinator ViewModel</li><li>Koin (DI)</li></ul>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Persistence & Networking</h4>
-                        <ul class="list-disc list-inside space-y-1"><li>Room Database</li><li>Preference DataStore</li><li>Kotlinx DateTime</li><li>In-App Update API</li></ul>
+                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Data & CI/CD</h4>
+                        <ul class="list-disc list-inside space-y-1"><li>Room (Multiplatform)</li><li>Preference DataStore</li><li>Kotlinx DateTime</li><li>GitHub Actions</li></ul>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer id="footer-placeholder"></footer>
 
     <a href="#" id="to-top-button" class="scroll-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../assets/js/script.js" defer></script>
 </body>
+
 </html>
